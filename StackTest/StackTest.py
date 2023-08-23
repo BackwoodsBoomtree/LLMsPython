@@ -9,7 +9,7 @@ from langchain import PromptTemplate, LLMChain
 snoozyPath = 'G:/LLMs/GPT4All-13B-snoozy.ggmlv3.q4_0.bin'
 # gptPath    = 'G:/LLMs/chatgpt-gpt-3.5-turbo.txt'
 falconPath = 'G:/LLMs/ggml-model-gpt4all-falcon-q4_0.bin'
-wizardPath = 'G:/LLMs/GPT4All-13B-snoozy.ggmlv3.q4_0.bin'
+wizardPath = 'G:/LLMs/wizardlm-13b-v1.1-superhot-8k.ggmlv3.q4_0.bin'
 
 # Instance of llm
 snoozyLlm = GPT4All(model = snoozyPath, verbose = True)
