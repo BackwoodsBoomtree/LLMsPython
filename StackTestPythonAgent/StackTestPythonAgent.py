@@ -3,7 +3,10 @@ import streamlit as st
 
 # Dependencies
 from langchain.llms import GPT4All
-from langchain import PromptTemplate, LLMChain
+
+# Python toolchain imports
+from langchain.agents.agent_toolkits import create_python_agent
+from langchain.tools.python.tool import PythonREPLTool
 
 # Path to weights
 PATH = 'G:/LLMs/GPT4All-13B-snoozy.ggmlv3.q4_0.bin'
@@ -11,16 +14,8 @@ PATH = 'G:/LLMs/GPT4All-13B-snoozy.ggmlv3.q4_0.bin'
 # Instance of llm
 myLlm = GPT4All(model = PATH, verbose = True)
 
-# Prompt template
-promptTemp = PromptTemplate(input_variables = ['question'],
-                        template = """
-                        Question: {question}
-                        
-                        Answer: Let's think step by step
-                        """)
-
-# LLM Chain
-chain = LLMChain(prompt = promptTemp, llm = myLlm)
+# Create python agent
+python_agent = create_python_agent(llm = myLlm, tool = PythonREPLTool(), verbose = True)
 
 # Title
 st.title('GPT Stack Test for Y\'all')
@@ -31,7 +26,7 @@ myPrompt = st.text_input('Give me your prompt!')
 # if we hit enter
 if myPrompt:
     # Pass prompt to chain
-    response = chain.run(myPrompt)
+    response = python_agent.run(myPrompt)
     
     # Return response
     st.write(response)
