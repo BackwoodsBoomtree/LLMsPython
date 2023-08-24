@@ -3,7 +3,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.agents import load_tools, initialize_agent
 from langchain.tools import AIPluginTool
 
-os.environ["OPENAI_API_KEY"]  = "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"
+os.environ["OPENAI_API_KEY"]  = "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"
 
 tool = AIPluginTool.from_plugin_url("https://www.klarna.com/.well-known/ai-plugin.json")
 

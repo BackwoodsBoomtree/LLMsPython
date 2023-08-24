@@ -14,7 +14,7 @@ from langchain.schema import (
 )
 
 # Keys
-os.environ["OPENAI_API_KEY"]           = "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"
+os.environ["OPENAI_API_KEY"]           = "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"
 os.environ["COHERE_API_KEY"]           = "dfy6sa9PQ1jU6xZs5CWCgHurNNjy2jqEgKihwVVm"
 os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 os.environ["SERPAPI_API_KEY"]          = "499bc6604439611d10af444dc8d3d7775ea87fc10d0de30e26783b9b76071e89"

@@ -3,7 +3,7 @@ from langchain.llms import OpenAI
 from langchain.agents import load_tools
 from langchain.agents import initialize_agent
 
-os.environ["OPENAI_API_KEY"]  = "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"
+os.environ["OPENAI_API_KEY"]  = "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"
 os.environ["SERPAPI_API_KEY"] = "499bc6604439611d10af444dc8d3d7775ea87fc10d0de30e26783b9b76071e89"
 
 gpt3  = OpenAI(model_name = 'text-davinci-003')
