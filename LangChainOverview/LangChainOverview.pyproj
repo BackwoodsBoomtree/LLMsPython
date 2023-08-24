@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>152a1849-2f51-49f5-a567-7d2e1979b51a</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>LangChainOverview.py</StartupFile>
+    <StartupFile>QExternalDoc.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="LangChainOverview.py" />
+    <Compile Include="QExternalDoc.py" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="lcoverview\">
