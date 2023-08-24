@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>152a1849-2f51-49f5-a567-7d2e1979b51a</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>AgentExample.py</StartupFile>
+    <StartupFile>ChatGPT_Plugins.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,6 +24,7 @@
   <ItemGroup>
     <Compile Include="AgentExample.py" />
     <Compile Include="ChainExample.py" />
+    <Compile Include="ChatGPT_Plugins.py" />
     <Compile Include="LangChainOverview.py" />
     <Compile Include="QExternalDoc.py" />
   </ItemGroup>
