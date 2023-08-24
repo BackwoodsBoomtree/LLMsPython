@@ -2,16 +2,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>152a1849-2f51-49f5-a567-7d2e1979b51a</ProjectGuid>
+    <ProjectGuid>75e28e3f-7e01-4d05-9c2a-b70933981939</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>LangChainOverview.py</StartupFile>
+    <StartupFile>LangChainSandbox.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>LangChainOverview</Name>
-    <RootNamespace>LangChainOverview</RootNamespace>
-    <InterpreterId>MSBuild|lcoverview|$(MSBuildProjectFullPath)</InterpreterId>
+    <Name>LangChainSandbox</Name>
+    <RootNamespace>LangChainSandbox</RootNamespace>
+    <InterpreterId>MSBuild|lcoverview|C:\Users\doug0002\source\LLMsPython\LangChainOverview\LangChainOverview.pyproj</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,18 +22,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="LangChainOverview.py" />
+    <Compile Include="LangChainSandbox.py" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="lcoverview\">
-      <Id>lcoverview</Id>
-      <Version>3.9</Version>
-      <Description>lcoverview (Python 3.9)</Description>
-      <InterpreterPath>Scripts\python.exe</InterpreterPath>
-      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X64</Architecture>
-    </Interpreter>
+    <InterpreterReference Include="MSBuild|lcoverview|C:\Users\doug0002\source\LLMsPython\LangChainOverview\LangChainOverview.pyproj" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

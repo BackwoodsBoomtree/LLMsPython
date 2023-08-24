@@ -9,6 +9,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "StackTestPythonAgent", "Sta
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "LangChainOverview", "LangChainOverview\LangChainOverview.pyproj", "{152A1849-2F51-49F5-A567-7D2E1979B51A}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "LangChainSandbox", "LangChainSandbox\LangChainSandbox.pyproj", "{75E28E3F-7E01-4D05-9C2A-B70933981939}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{E2042770-4515-4260-BAF8-AA0B0F9DDC45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{152A1849-2F51-49F5-A567-7D2E1979B51A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{152A1849-2F51-49F5-A567-7D2E1979B51A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75E28E3F-7E01-4D05-9C2A-B70933981939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75E28E3F-7E01-4D05-9C2A-B70933981939}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

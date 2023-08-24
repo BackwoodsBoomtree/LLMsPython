@@ -1,6 +1,9 @@
-# Citation: Sophia Yang https://www.youtube.com/watch?v=kmbS6FDQh7c&t=78s&ab_channel=SophiaYang
 
+# This script combines API calls and streamlit
+
+# App dev framework
 import os
+import streamlit as st
 import langchain
 from langchain.llms import OpenAI, Cohere, HuggingFaceHub
 from langchain.chat_models import ChatOpenAI
@@ -10,30 +13,34 @@ from langchain.schema import (
     SystemMessage
 )
 
-print('HELLO!\n')
-
+# Keys
 os.environ["OPENAI_API_KEY"]           = "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"
 os.environ["COHERE_API_KEY"]           = "dfy6sa9PQ1jU6xZs5CWCgHurNNjy2jqEgKihwVVm"
 os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
 os.environ["SERPAPI_API_KEY"]          = "499bc6604439611d10af444dc8d3d7775ea87fc10d0de30e26783b9b76071e89"
 
+# Models
 chatgpt = ChatOpenAI(model_name = 'gpt-3.5-turbo')
 gpt3    = OpenAI(model_name = 'text-davinci-003')
 cohere  = Cohere(model = 'command-xlarge')
-flan    = HuggingFaceHub(repo_id = 'google/flan-t5-xl')
+flan    = HuggingFaceHub(repo_id = 'google/flan-t5-xxl')
 
-text = "Should I stay in academia?"
-print(text + "\n")
+# Title
+st.title('GPT Stack Test for Fun Y\'all')
 
-print('ChatGPT 3.5 Turbo says:\n')
-print(chatgpt([HumanMessage(content = text)]))
+# Prompt text box
+myPrompt = st.text_input('Give me your prompt!')
 
-print('\nChatGPT 3 Turbo says:\n')
-print(gpt3(text))
+# if we hit enter
+if myPrompt:
+    st.write('ChatGPT 3.5 Turbo says:\n')
+    st.write(chatgpt([HumanMessage(content = myPrompt)]))
 
-print('\nCohere says:\n')
-print(cohere(text))
+    st.write('\nChatGPT 3 says:\n')
+    st.write(gpt3(myPrompt))
 
-print('\nFlan says:\n')
-print(flan(text))
+    st.write('\nCohere says:\n')
+    st.write(cohere(myPrompt))
 
+    st.write('\nFlan says:\n')
+    st.write(flan(myPrompt))
