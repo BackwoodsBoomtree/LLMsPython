@@ -20,7 +20,7 @@ os.environ["SERPAPI_API_KEY"]          = "499bc6604439611d10af444dc8d3d7775ea87f
 chatgpt = ChatOpenAI(model_name = 'gpt-3.5-turbo')
 gpt3    = OpenAI(model_name = 'text-davinci-003')
 cohere  = Cohere(model = 'command-xlarge')
-flan    = HuggingFaceHub(repo_id = 'google/flan-t5-xl')
+flan    = HuggingFaceHub(repo_id = 'google/flan-t5-xxl')
 
 text = "Should I stay in academia?"
 print(text + "\n")
